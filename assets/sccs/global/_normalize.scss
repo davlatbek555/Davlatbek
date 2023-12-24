@@ -48,7 +48,8 @@
     max-width: 1320px;
     padding: 11px;
     margin: 0 auto;
-    @include flex (center, space-between)
+    @include flex (center, space-between);
+    overflow-x: scroll;
 }
 .main {
     flex: 1 1 auto;
