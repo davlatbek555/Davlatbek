@@ -1,0 +1,118 @@
+.header {
+    &__logo {
+        &_two {
+            display: none;
+        }
+        &_one {
+            @include media (768) {
+                display: none;
+            }
+        }
+        &_two {
+            @include media (768) {
+                display: block;
+            }
+        }
+
+    }
+    @include flex (center, space-between);
+    display: flex;
+    align-items: center;
+    @include media (840) {
+        padding: 0 30px;
+    }
+    &__navbar {
+        display: flex;
+        &:not(:last-child){
+            gap: 48px;
+        }
+        @include media (900) {
+            &:not(:last-child){
+                gap: 28px;
+            }
+        }
+        @include media (840) {
+            display: none;
+        }
+        &_link {
+            color: var(--Black-1, #8D8C8B);
+            font-family: SF Pro Text;
+            font-size: 16px;
+            font-style: normal;
+            font-weight: 600;
+            transition: all 0.2 ease-in-out;
+            line-height: normal;
+            &:focus {
+                color: #1C1917;
+            }
+            &:hover {
+                color: #1C1917;
+                transition: all 0.2 ease-in-out;
+            }
+        }
+    }
+    &__buttons {
+
+        @include flex (center);
+        gap: 12px;
+        &:not(:last-child){
+            gap: 12px;
+        }
+        &_mobile {
+            display: none;
+            @include media (768) {
+                display: block;
+            }
+        }
+        &_button-1 {
+            display: inline-flex;
+            padding: 18px 36px;
+            align-items: flex-start;
+            gap: 10px;
+            border-radius: 8px;
+            background: var(--Brown-2, #FF8541);
+            color: #FFF;
+            font-family: SF Pro Text;
+            font-size: 16px;
+            font-style: normal;
+            font-weight: 600;
+            line-height: normal;
+            transition: all 0.2s ease-in-out;
+            &:hover {
+                background: #fff;
+                color: #FF8541;
+                border: 1px solid #FF8541;  
+            }
+            @include media (768) {
+                color: #FFF;
+                font-family: SF Pro Text;
+                font-size: 16px;
+                padding: 12px 30px;
+                font-style: normal;
+                font-weight: 400;
+                line-height: normal;
+                
+            }
+        }
+        &_button-2 {
+            @include media (768) {
+                display: none;
+            }
+            @include flex (center, flex-end);
+            width: 83px;
+            height: 55px;
+            padding: 16px 11px 15px 18px;
+            gap: 8px;
+            flex-shrink: 0;
+            border-radius: 8px;
+            border: 1px solid var(--Black-2, #555351);
+            background: #FFF;
+            transition: all 0.2s ease-in-out;
+            &:hover {
+                background: #FF8541;
+                color: #000;
+                border: none;
+            }
+        }
+    }
+}

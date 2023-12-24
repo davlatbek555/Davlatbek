@@ -1,0 +1,56 @@
+.wrapper {
+    width: 100%;
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+    font-family: $main-font-2;
+    font-size: 14px;
+    font-style: normal;
+    font-weight: normal;
+    line-height: normal;
+}
+.container {
+    width: 100%;
+    max-width: 1320px;
+    padding: 11px;
+    margin: 0 auto;
+    @include flex (center, space-between)
+}
+.container-1 {
+    max-width: 1320px;
+    margin: 80px auto;
+    position: relative;
+    width: 1420px;
+    height: 716px;
+    flex-shrink: 0;
+    background-image: url(/images/back/Rectangle\ 3.png);
+    border-radius: 26px;
+    @include media (1110) {
+        width: 1020px;
+        height: 616px;
+    }
+    @include media (900) {
+        width: 820px;
+        height: 516px;
+    }
+    @include media (768) {
+        width: 650px;
+        height: 416px;
+    }
+    @include media (380) {
+        width: 350px;
+        height: 316px;
+    }
+}
+.container-2 {
+    width: 100%;
+    gap: 24px;
+    max-width: 1320px;
+    padding: 11px;
+    margin: 0 auto;
+    @include flex (center, space-between)
+}
+.main {
+    flex: 1 1 auto;
+    border-top: 1px solid #333;
+}
